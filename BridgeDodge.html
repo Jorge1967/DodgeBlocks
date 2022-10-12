@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Jorge B Rivero" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- responsive design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"&amp;gt;>
+ <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+</head>
+<body>
+  <div id="myFilter"></div>
+  <canvas id="myCanvas"></canvas>
+
+  <div id="menuOpc1" style="display:none;height: 400px;">
+    <ul class="menuScreen1">
+      <div class="swal-title">Set Bar Color</div>
+      <div class="swal-content">
+        <div style="display:flex;justify-content:space-around;">
+          <button class="graficopc00" id="_A10" onclick="opcgrafBar('10')">
+            <canvas id="Canvas1" class="imgraficoBar" style="opacity:1;" ></canvas>
+          </button>
+          <button class="graficopc11" id="_A20" onclick="opcgrafBar('20')">
+            <canvas id="Canvas1" class="imgraficoBar" style="opacity:.8;"></canvas>
+          </button>
+          <button class="graficopc11" id="_A30" onclick="opcgrafBar('30')">
+            <canvas id="Canvas1" class="imgraficoBar" style="opacity:.6;"></canvas>
+          </button>
+          <button class="graficopc11" id="_A40" onclick="opcgrafBar('40')">
+            <canvas id="Canvas1" class="imgraficoBar" style="opacity:.4;"></canvas>
+          </button>
+          <button class="graficopc11" id="_A50" onclick="opcgrafBar('50')">
+            <canvas id="Canvas1" class="imgraficoBar" style="opacity:.2;"></canvas>
+          </button>
+        </div>
+        <br>
+        <div style="display:flex;margin:-5px 0px;justify-content:space-around;">
+          <div style="width:59px;font-size:14px;font-weight:700;">100</div>
+          <div style="width:59px;font-size:14px;font-weight:700;">80</div>
+          <div style="width:59px;font-size:14px;font-weight:700;">60</div>
+          <div style="width:59px;font-size:14px;font-weight:700;">40</div>
+          <div style="width:59px;font-size:14px;font-weight:700;">20</div>
+        </div>
+        <br>
+        <div style="display:flex;justify-content:space-around;" class="grafico">
+          <button class="graficopc00" id="_R11" onclick="opcgrafBar('11')">
+            <canvas id="Canvas1" class="imgraficoBar1" style="opacity:1;" ></canvas>
+          </button>
+          <button class="graficopc11" id="_R21" onclick="opcgrafBar('21')">
+            <canvas id="Canvas1" class="imgraficoBar1" style="opacity:.8;"></canvas>
+          </button>
+          <button class="graficopc11" id="_R31" onclick="opcgrafBar('31')">
+            <canvas id="Canvas1" class="imgraficoBar1" style="opacity:.6;"></canvas>
+          </button>
+          <button class="graficopc11" id="_R41" onclick="opcgrafBar('41')">
+            <canvas id="Canvas1" class="imgraficoBar1" style="opacity:.4;"></canvas>
+          </button>
+          <button class="graficopc11" id="_R51" onclick="opcgrafBar('51')">
+            <canvas id="Canvas1" class="imgraficoBar1" style="opacity:.2;"></canvas>
+          </button>
+        </div>
+      </div>
+      <img src="img/ok.png" class="imgok" onclick="opcOK1()" />
+    </ul>
+  </div>
+
+  <div id="menuOpc2" style="display:none;">
+    <ul class="menuScreen2">
+      <div class="swal-title">Set Ball Color</div>
+      <div class="swal-content">
+        <div style="display:flex;justify-content:space-around;">
+          <button class="graficopc0" id="cirB">
+            <img src="img/cirB.png" class="imgraficoBall" onclick="opcgrafBall('B')" />
+          </button>
+          <button class="graficopc1" id="cirN">
+            <img src="img/cirN.png" class="imgraficoBall" onclick="opcgrafBall('N')" />
+          </button>
+          <button class="graficopc1" id="cirR">
+            <img src="img/cirR.png" class="imgraficoBall" onclick="opcgrafBall('R')" />
+          </button>
+          <button class="graficopc1" id="cirA">
+            <img src="img/cirA.png" class="imgraficoBall" onclick="opcgrafBall('A')" />
+          </button>
+        </div>
+      </div>
+      <img src="img/ok.png" class="imgok" onclick="opcOK2()" />
+    </ul>
+  </div>
+  <div style="position:absolute;top:-9.5%;z-index: 30;">
+    <div class="range-slider">
+      <label style="Color:white;font-size:22px;margin-left:15px;">Sped:</label>
+      <input id="rs-range-line" class="rs-range" type="range" value="0" min="0" max="90" step="30" style="left:10px;" onclick="sliderOpc(this.value)">
+    </div>
+    <div class="box-minmax">
+      <span style="margin-left:110px;">0</span><span style="margin-left:-3px;">1</span><span style="margin-left:-1px;">2</span><span style="margin-left:-1px;">3</span>
+    </div>
+  </div>
+
+  <div class="color_inicio"></div>
+  <center>
+    <button onclick="start()" id= "startButton">Play</button>
+    <img src="img/audioON.png" class="audioON" id="audioON" onclick="opcAudioON()" style="display:none;" />
+    <img src="img/audioOFF.png" class="audioON" id="audioOFF" onclick="opcAudioOFF()" style="display:none;" />
+    <button onclick="botonOPC1()" class="menu-button1">CONFIG BARS</button>
+    <button onclick="botonOPC2()" class="menu-button2">CONFIG BALL</button>
+  </center>
+  <script language="javascript" type="text/javascript" src="js/script.js" ></script>
+</body>
+</html>
